@@ -1,0 +1,23 @@
+{
+	"name": "understanding-ts",
+	"version": "1.0.0",
+	"main": "app.js",
+	"scripts": {
+		"start": "lite-server"
+	},
+	"author": "Will Kee",
+	"license": "ISC",
+	"devDependencies": {
+		"lite-server": "^2.5.4"
+	},
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/willkee/typescript-practice.git"
+	},
+	"bugs": {
+		"url": "https://github.com/willkee/typescript-practice/issues"
+	},
+	"homepage": "https://github.com/willkee/typescript-practice#readme",
+	"description": ""
+}

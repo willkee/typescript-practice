@@ -1,4 +1,4 @@
-const button = document.querySelector("button");
+const b1 = document.querySelector("button");
 const input1 = document.getElementById("num1")! as HTMLInputElement;
 const input2 = document.getElementById("num2")! as HTMLInputElement;
 
@@ -24,15 +24,34 @@ const num2 = 2.8;
 const result = add(num1, num2);
 console.log(result);
 
-button?.addEventListener("click", () =>
+b1?.addEventListener("click", () =>
 	console.log(add(+input1.value, +input2.value))
 );
 
-const person = {
+// const person = {
+// 	name: "Will",
+// 	age: 37,
+// };
+
+// In TypeScript, object types are written almost like objects
+// There are key/TYPE pairs
+
+// generic object type--we need to be more specific
+// const person: object = {
+// 	name: "Will",
+// 	age: 37,
+// };
+
+const person: {
+	// key/types
+	name: string;
+	age: number;
+} = {
+	// key/values
 	name: "Will",
 	age: 37,
 };
 
 console.log(person.age); // OK
 console.log(person.name); // OK
-console.log(person.nickname); // TypeScript tells us there is no nickname property
+// console.log(person.nickname); // TypeScript tells us there is no nickname property

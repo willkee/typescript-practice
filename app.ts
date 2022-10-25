@@ -1,3 +1,12 @@
+// We can call types anything we want as long as it isn't a reserved keyword
+
+type yayLol = number | string;
+type Combinable = number | string;
+type mYCuStoMDeScRiPtOr = "as-number" | "as-string";
+
+// Types can store object types too
+type customUser = { name: string; age: number };
+
 // Union Types
 
 /*
@@ -25,8 +34,8 @@ console.log(combinedNames);
 
 // Literal Types
 function combine(
-	input1: number | string,
-	input2: number | string,
+	input1: yayLol,
+	input2: Combinable,
 	resultConversion: "as-number" | "as-text" // we allow only these 2 strings
 ) {
 	// input1: number | string   -> is saying we can accept number OR string
@@ -58,3 +67,21 @@ console.log(combinedNames);
 
 // const combinedNamesError = combine("Max", "Will", "as-test"); // will be an error, because of the union and literal types
 // console.log(combinedNamesError);
+
+enum Title {
+	Analyst = 50,
+	Software_Engineer,
+	Senior_Software_Engineer,
+	Staff_Software_Engineer = "abc",
+	CFO = 5,
+	President,
+}
+
+console.log(Title);
+
+const person3 = {
+	name: "John Doe",
+	title: Title.Senior_Software_Engineer,
+};
+
+console.log(person3.title);

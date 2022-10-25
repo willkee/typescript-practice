@@ -1,8 +1,9 @@
+/*
 const b1 = document.querySelector("button");
 const input1 = document.getElementById("num1")! as HTMLInputElement;
 const input2 = document.getElementById("num2")! as HTMLInputElement;
 
-/*
+
 
 TypeScript adds TYPES to be more explicit.
 Types are statically-typed in TypeScript (set during development).
@@ -14,7 +15,7 @@ number: all numbers (integers, float, decimal)
 string: all text values
 boolean: true or false (no "truthy" or "falsy" values)
 
-*/
+
 
 const add = (n1: number, n2: number) => n1 + n2;
 
@@ -134,3 +135,31 @@ test = 123;
 test = [12, 23, "asd", "dfg"];
 
 // Try to avoid the "any" type. It defeats the purpose of TypeScript.
+*/
+
+const add = (val1: number, val2: number) => val1 + val2;
+
+console.log(add(1, 2));
+// console.log(add("1", "2"));
+// console.log(add("1", 2134234234));
+
+const person: {
+	name: string;
+	age: number;
+	hobbies: string[];
+	role: [number, string];
+	stuff: boolean[];
+} = {
+	name: "Will",
+	age: 37,
+	hobbies: ["Sports", "Hiking"],
+	role: [2, "author"],
+	stuff: [true, false, true, false],
+};
+
+// let test: string;
+
+// test = "sdfhsdfsdf";
+// test = true
+// test = false
+// test = 123;
